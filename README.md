@@ -22,6 +22,6 @@ docker run -p 5000:5000 diawine-dashboard
 ```
 
 ### Estrutura
-Frontend: React.js
-Backend: Flask e Pandas
-Banco de Dados: Planilhas CSV
+1. Frontend: React.js
+2. Backend: Flask e Pandas
+3. Banco de Dados: Planilhas CSV
