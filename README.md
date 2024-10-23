@@ -19,6 +19,7 @@ Você pode rodar o projeto usando Docker:
 ```bash
 docker build -t diawine-dashboard .
 docker run -p 5000:5000 diawine-dashboard
+```
 
 ### Estrutura
 Frontend: React.js
