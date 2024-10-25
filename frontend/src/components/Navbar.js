@@ -1,10 +1,10 @@
-import React from 'react';
+/* import React from 'react';
 
 const Navbar = () => {
   return (
     <nav>
       <div className="logo">
-        <img src="/logo.png" alt="Dia Wine Logo" />
+        <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Dia Wine Logo" />
       </div>
       <ul>
         <li><a href="/">Home</a></li>
@@ -17,4 +17,18 @@ const Navbar = () => {
   );
 }
 
+export default Navbar; */
+
+import React from 'react';
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Dia Wine Logo" className="logo" />
+      <h2>DASHBOARD DIA WINE</h2>
+    </nav>
+  );
+};
+
 export default Navbar;
+

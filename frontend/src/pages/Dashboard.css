@@ -1,0 +1,53 @@
+/* src/pages/Dashboard.css */
+
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+  
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.logo {
+    height: 50px; /* Ajuste conforme necessário */
+}
+  
+h1 {
+    font-size: 24px;
+}
+  
+.overview, .filters, .data-table {
+    margin-bottom: 20px;
+}
+  
+.summary {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.filters input {
+    margin: 5px;
+}
+  
+.data-table {
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+  
+th {
+    background-color: #f2f2f2;
+}
