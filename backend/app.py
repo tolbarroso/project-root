@@ -1,13 +1,17 @@
-# backend/app.py
-from flask import Flask, jsonify
+import os
+from flask import Flask, jsonify, abort
 import pandas as pd
 
 app = Flask(__name__)
 
+def get_data(file_path):
+    if not os.path.exists(file_path):
+        abort(404, description=f'Arquivo {file_path} não encontrado')
+    return pd.read_csv(file_path)
+
 @app.route('/api/top10/2023', methods=['GET'])
 def get_top10_2023():
-    data = pd.read_csv('../data/dados2023.csv')
-    # Processa os dados, por exemplo, somando as quantidades e ordenando
+    data = get_data('../data/dados2023.csv')
     top_products = (
         data.groupby('PRODUTO')['QT']
         .sum()
@@ -28,7 +32,7 @@ def get_top10_2023():
 
 @app.route('/api/top10/2024', methods=['GET'])
 def get_top10_2024():
-    data = pd.read_csv('../data/dados2024.csv')
+    data = get_data('../data/dados2024.csv')
     top_products = (
         data.groupby('PRODUTO')['QT']
         .sum()

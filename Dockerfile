@@ -3,6 +3,7 @@ FROM python:3.8-slim AS backend
 
 WORKDIR /app
 COPY ./backend /app
+COPY ./data /app/data
 
 RUN pip install -r requirements.txt
 
