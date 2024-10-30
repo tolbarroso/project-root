@@ -1,21 +1,18 @@
-// src/components/Navbar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
-  return (
-    <nav className="navbar">
-      <img src={process.env.PUBLIC_URL + '/logo.png'} alt="Dia Wine Logo" className="logo" />
-      <h2>DASHBOARD DIA WINE</h2>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="https://www.diawine.com.br/">Site</a></li>
-        <li><a href="https://www.diawine.com.br/c/7/promocoes">Ofertas Atuais</a></li>
-        <li><a href="/top-produtos">Top 10</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-      </ul>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav className="navbar">
+    <img src="/logo.png" alt="Dia Wine Logo" className="logo" />
+    <ul>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/dashboard">Dashboard</Link></li>
+      <li><Link to="/top10">Top 10</Link></li>
+      <li><Link to="/site-diawine" target="_blank">Site Dia Wine</Link></li>
+      <li><Link to="/ofertas">Ofertas Atuais</Link></li>
+    </ul>
+  </nav>
+);
 
 export default Navbar;

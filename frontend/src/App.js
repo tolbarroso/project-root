@@ -1,21 +1,23 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { Link } from 'react-router-dom'; 
-import './styles.css'; 
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Top10 from './pages/Top10';
+import SiteDiaWine from './pages/SiteDiaWine';
+import Ofertas from './pages/Ofertas';
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-      <h1>Bem-vindo a Dia Wine</h1>
-      <div className="button-container">
-        <a href="https://www.diawine.com.br/" className="button" target="_blank" rel="noopener noreferrer">Site</a>
-        <a href="https://www.diawine.com.br/c/7/promocoes" className="button" target="_blank" rel="noopener noreferrer">Ofertas Atuais</a>
-        <Link to="/top10" className="button">Top 10</Link>
-        <Link to="/dashboard" className="button">Dashboard</Link>
-      </div>
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <Navbar />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/dashboard" component={Dashboard} />
+      <Route path="/top10" component={Top10} />
+      <Route path="/site-diawine" component={SiteDiaWine} />
+      <Route path="/ofertas" component={Ofertas} />
+    </Switch>
+  </div>
+);
 
 export default App;
