@@ -2,7 +2,7 @@ import React from 'react';
 
 const SiteDiaWine = () => {
   React.useEffect(() => {
-    window.location.href = 'https://www.diawine.com.br'; // Substitua pela URL oficial do site da Dia Wine
+    window.location.href = 'https://www.diawine.com.br'; 
   }, []);
 
   return (

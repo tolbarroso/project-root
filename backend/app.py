@@ -1,16 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask
 from flask_cors import CORS
-from routes.top10 import top10_routes
+from routes.ofertas import ofertas_blueprint
+from routes.top10 import top10_blueprint
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  
 
-# Registra as rotas
-app.register_blueprint(top10_routes)
-
-@app.route('/')
-def home():
-    return jsonify({"message": "Backend funcionando!"})
+app.register_blueprint(ofertas_blueprint)
+app.register_blueprint(top10_blueprint)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)

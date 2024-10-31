@@ -1,9 +1,11 @@
-from flask import Flask
-from .ofertas import ofertas_blueprint
-from .top10 import top10_blueprint
+from flask import Flask, jsonify, request
+from utils import load_data, filter_data
 
-def create_app():
-    app = Flask(__name__)
-    app.register_blueprint(ofertas_blueprint)
-    app.register_blueprint(top10_blueprint)
-    return app
+app = Flask(__name__)
+
+@app.route('/api/data', methods=['GET'])
+def get_filtered_data():
+    filters = request.args.to_dict()
+    data = load_data()
+    filtered_data = filter_data(data, filters)
+    return jsonify(filtered_data)

@@ -1,53 +1,48 @@
-/* src/pages/Dashboard.css */
-
 .dashboard {
-    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #000;
     padding: 20px;
-}
+  }
   
-.dashboard-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .dashboard-header {
+    text-align: center;
     margin-bottom: 20px;
-}
+  }
   
-.logo {
-    height: 50px; /* Ajuste conforme necessário */
-}
-  
-h1 {
-    font-size: 24px;
-}
-  
-.overview, .filters, .data-table {
-    margin-bottom: 20px;
-}
-  
-.summary {
+  .summary {
     display: flex;
-    justify-content: space-between;
-}
+    gap: 20px;
+  }
   
-.filters input {
-    margin: 5px;
-}
+  .card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
   
-.data-table {
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-}
+  .filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
   
-table {
+  .filters-container input {
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 3px;
+  }
+  
+  .data-table table {
     width: 100%;
     border-collapse: collapse;
-}
+    color: white;
+  }
   
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+  .data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid #333;
     text-align: left;
-}
+  }
   
-th {
-    background-color: #f2f2f2;
-}
