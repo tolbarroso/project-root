@@ -104,10 +104,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <header className="dashboard-header">
-        <h1>Site</h1>
-      </header>
-
       {/* Visão Geral */}
       <section className="overview">
         <h2>Visão Geral</h2>
