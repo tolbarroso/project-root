@@ -1,48 +1,48 @@
 .dashboard {
-    color: white;
-    background-color: #000;
-    padding: 20px;
-  }
-  
-  .dashboard-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .summary {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .card {
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .filters-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .filters-container input {
-    padding: 5px;
-    border: 1px solid #333;
-    border-radius: 3px;
-  }
-  
-  .data-table table {
-    width: 100%;
-    border-collapse: collapse;
-    color: white;
-  }
-  
-  .data-table th, .data-table td {
-    padding: 10px;
-    border: 1px solid #333;
-    text-align: left;
-  }
-  
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.filters-container {
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+}
+
+.summary .card {
+  flex: 1;
+  margin: 5px;
+}
